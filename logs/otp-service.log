@@ -1,0 +1,357 @@
+2026-04-28 16:13:44.055 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-28 16:13:44.305 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@c03cf28
+2026-04-28 16:13:44.306 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-28 16:13:44.401 [main] INFO  c.promoit.otp.db.DatabaseInitializer - Default admin created (admin/admin)
+2026-04-28 16:16:32.810 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-28 16:16:32.949 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@c03cf28
+2026-04-28 16:16:32.953 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-28 16:16:33.092 [main] INFO  com.promoit.otp.Main - OTP Service started on port 8081
+2026-04-28 16:50:55.971 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-28 16:50:56.110 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1329eff
+2026-04-28 16:50:56.111 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-28 16:53:56.459 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-28 16:53:56.595 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1356d4d4
+2026-04-28 16:53:56.596 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-28 16:56:09.559 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-28 16:56:09.795 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1329eff
+2026-04-28 16:56:09.796 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-28 16:57:49.751 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-28 16:57:49.887 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@c03cf28
+2026-04-28 16:57:49.888 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-28 16:58:44.457 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-28 16:58:44.704 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1329eff
+2026-04-28 16:58:44.705 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-28 16:58:44.833 [main] INFO  com.promoit.otp.Main - OTP Service started on port 8081
+2026-04-28 17:03:52.841 [pool-2-thread-10] INFO  c.p.o.s.n.FileNotificationService - OTP saved to file otp_code_test.txt
+2026-04-28 17:03:52.842 [pool-2-thread-10] INFO  com.promoit.otp.api.UserHandler - OTP generated for user 1 operation test123
+2026-04-28 17:05:58.933 [pool-2-thread-2] INFO  com.promoit.otp.api.UserHandler - OTP validation for user 1 operation test123: true
+2026-04-28 17:09:13.953 [pool-2-thread-4] ERROR c.p.o.s.n.TelegramNotificationService - Telegram sending failed
+java.net.ConnectException: null
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:923)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at com.promoit.otp.service.notification.TelegramNotificationService.send(TelegramNotificationService.java:40)
+	at com.promoit.otp.service.OtpService.generateAndSend(OtpService.java:46)
+	at com.promoit.otp.api.UserHandler.generateOtp(UserHandler.java:78)
+	at com.promoit.otp.api.UserHandler.handle(UserHandler.java:58)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.AuthFilter.doFilter(AuthFilter.java:76)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:101)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange$LinkHandler.handle(ServerImpl.java:915)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:891)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.net.ConnectException: null
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1070)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:223)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:277)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:235)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:955)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:932)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:531)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1794)
+	... 3 common frames omitted
+Caused by: java.nio.channels.ClosedChannelException: null
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:204)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:942)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:211)
+	... 9 common frames omitted
+2026-04-28 17:09:13.958 [pool-2-thread-4] ERROR com.promoit.otp.api.UserHandler - User handler error
+java.nio.channels.ClosedByInterruptException: null
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:214)
+	at java.base/sun.nio.ch.SocketChannelImpl.endWrite(SocketChannelImpl.java:548)
+	at java.base/sun.nio.ch.SocketChannelImpl.implWrite(SocketChannelImpl.java:570)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:614)
+	at jdk.httpserver/sun.net.httpserver.Request$WriteStream.write(Request.java:421)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:123)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:203)
+	at java.base/java.io.FilterOutputStream.flush(FilterOutputStream.java:155)
+	at jdk.httpserver/sun.net.httpserver.FixedLengthOutputStream.close(FixedLengthOutputStream.java:90)
+	at jdk.httpserver/sun.net.httpserver.PlaceholderOutputStream.close(ExchangeImpl.java:477)
+	at com.promoit.otp.api.UserHandler.sendResponse(UserHandler.java:111)
+	at com.promoit.otp.api.UserHandler.generateOtp(UserHandler.java:81)
+	at com.promoit.otp.api.UserHandler.handle(UserHandler.java:58)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.AuthFilter.doFilter(AuthFilter.java:76)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:101)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange$LinkHandler.handle(ServerImpl.java:915)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:891)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-04-28 17:09:59.317 [pool-2-thread-6] ERROR c.p.o.s.n.TelegramNotificationService - Telegram sending failed
+java.net.ConnectException: null
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:923)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at com.promoit.otp.service.notification.TelegramNotificationService.send(TelegramNotificationService.java:40)
+	at com.promoit.otp.service.OtpService.generateAndSend(OtpService.java:46)
+	at com.promoit.otp.api.UserHandler.generateOtp(UserHandler.java:78)
+	at com.promoit.otp.api.UserHandler.handle(UserHandler.java:58)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.AuthFilter.doFilter(AuthFilter.java:76)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:101)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange$LinkHandler.handle(ServerImpl.java:915)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:891)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.net.ConnectException: null
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1070)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:223)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:277)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:235)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:955)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:932)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:531)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1794)
+	... 3 common frames omitted
+Caused by: java.nio.channels.ClosedChannelException: null
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:204)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:942)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:211)
+	... 9 common frames omitted
+2026-04-28 17:09:59.318 [pool-2-thread-6] ERROR com.promoit.otp.api.UserHandler - User handler error
+java.nio.channels.ClosedByInterruptException: null
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:214)
+	at java.base/sun.nio.ch.SocketChannelImpl.endWrite(SocketChannelImpl.java:548)
+	at java.base/sun.nio.ch.SocketChannelImpl.implWrite(SocketChannelImpl.java:570)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:614)
+	at jdk.httpserver/sun.net.httpserver.Request$WriteStream.write(Request.java:421)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:123)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:203)
+	at java.base/java.io.FilterOutputStream.flush(FilterOutputStream.java:155)
+	at jdk.httpserver/sun.net.httpserver.FixedLengthOutputStream.close(FixedLengthOutputStream.java:90)
+	at jdk.httpserver/sun.net.httpserver.PlaceholderOutputStream.close(ExchangeImpl.java:477)
+	at com.promoit.otp.api.UserHandler.sendResponse(UserHandler.java:111)
+	at com.promoit.otp.api.UserHandler.generateOtp(UserHandler.java:81)
+	at com.promoit.otp.api.UserHandler.handle(UserHandler.java:58)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.AuthFilter.doFilter(AuthFilter.java:76)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:101)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange$LinkHandler.handle(ServerImpl.java:915)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:891)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-04-28 17:13:44.679 [pool-1-thread-1] INFO  c.p.otp.service.OtpExpiryScheduler - Code 2 (operation tgtest) marked EXPIRED
+2026-04-28 17:14:44.675 [pool-1-thread-1] INFO  c.p.otp.service.OtpExpiryScheduler - Code 3 (operation tgtest) marked EXPIRED
+2026-04-28 17:16:57.457 [pool-2-thread-10] ERROR c.p.o.s.n.TelegramNotificationService - Telegram sending failed
+java.net.ConnectException: null
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:923)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at com.promoit.otp.service.notification.TelegramNotificationService.send(TelegramNotificationService.java:40)
+	at com.promoit.otp.service.OtpService.generateAndSend(OtpService.java:46)
+	at com.promoit.otp.api.UserHandler.generateOtp(UserHandler.java:78)
+	at com.promoit.otp.api.UserHandler.handle(UserHandler.java:58)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.AuthFilter.doFilter(AuthFilter.java:76)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:101)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange$LinkHandler.handle(ServerImpl.java:915)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:891)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.net.ConnectException: null
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1070)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:223)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:277)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:235)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:955)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:932)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:531)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1794)
+	... 3 common frames omitted
+Caused by: java.nio.channels.ClosedChannelException: null
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:204)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:942)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:211)
+	... 9 common frames omitted
+2026-04-28 17:16:57.458 [pool-2-thread-10] ERROR com.promoit.otp.api.UserHandler - User handler error
+java.nio.channels.ClosedByInterruptException: null
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:214)
+	at java.base/sun.nio.ch.SocketChannelImpl.endWrite(SocketChannelImpl.java:548)
+	at java.base/sun.nio.ch.SocketChannelImpl.implWrite(SocketChannelImpl.java:570)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:614)
+	at jdk.httpserver/sun.net.httpserver.Request$WriteStream.write(Request.java:421)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:123)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:203)
+	at java.base/java.io.FilterOutputStream.flush(FilterOutputStream.java:155)
+	at jdk.httpserver/sun.net.httpserver.FixedLengthOutputStream.close(FixedLengthOutputStream.java:90)
+	at jdk.httpserver/sun.net.httpserver.PlaceholderOutputStream.close(ExchangeImpl.java:477)
+	at com.promoit.otp.api.UserHandler.sendResponse(UserHandler.java:111)
+	at com.promoit.otp.api.UserHandler.generateOtp(UserHandler.java:81)
+	at com.promoit.otp.api.UserHandler.handle(UserHandler.java:58)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.AuthFilter.doFilter(AuthFilter.java:76)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:101)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange$LinkHandler.handle(ServerImpl.java:915)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:891)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-04-28 17:17:50.347 [pool-2-thread-2] ERROR c.p.o.s.n.TelegramNotificationService - Telegram sending failed
+java.net.ConnectException: null
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:923)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at com.promoit.otp.service.notification.TelegramNotificationService.send(TelegramNotificationService.java:40)
+	at com.promoit.otp.service.OtpService.generateAndSend(OtpService.java:46)
+	at com.promoit.otp.api.UserHandler.generateOtp(UserHandler.java:78)
+	at com.promoit.otp.api.UserHandler.handle(UserHandler.java:58)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.AuthFilter.doFilter(AuthFilter.java:76)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:101)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange$LinkHandler.handle(ServerImpl.java:915)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:891)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.net.ConnectException: null
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1070)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:223)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:277)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:235)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:955)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:932)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:531)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1794)
+	... 3 common frames omitted
+Caused by: java.nio.channels.ClosedChannelException: null
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:204)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:942)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:211)
+	... 9 common frames omitted
+2026-04-28 17:17:50.348 [pool-2-thread-2] ERROR com.promoit.otp.api.UserHandler - User handler error
+java.nio.channels.ClosedByInterruptException: null
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:214)
+	at java.base/sun.nio.ch.SocketChannelImpl.endWrite(SocketChannelImpl.java:548)
+	at java.base/sun.nio.ch.SocketChannelImpl.implWrite(SocketChannelImpl.java:570)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:614)
+	at jdk.httpserver/sun.net.httpserver.Request$WriteStream.write(Request.java:421)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:123)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:203)
+	at java.base/java.io.FilterOutputStream.flush(FilterOutputStream.java:155)
+	at jdk.httpserver/sun.net.httpserver.FixedLengthOutputStream.close(FixedLengthOutputStream.java:90)
+	at jdk.httpserver/sun.net.httpserver.PlaceholderOutputStream.close(ExchangeImpl.java:477)
+	at com.promoit.otp.api.UserHandler.sendResponse(UserHandler.java:111)
+	at com.promoit.otp.api.UserHandler.generateOtp(UserHandler.java:81)
+	at com.promoit.otp.api.UserHandler.handle(UserHandler.java:58)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.AuthFilter.doFilter(AuthFilter.java:76)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:101)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange$LinkHandler.handle(ServerImpl.java:915)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:891)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-04-28 17:19:13.366 [pool-2-thread-4] ERROR c.p.o.s.n.TelegramNotificationService - Telegram sending failed
+java.net.ConnectException: null
+	at java.net.http/jdk.internal.net.http.HttpClientImpl.send(HttpClientImpl.java:923)
+	at java.net.http/jdk.internal.net.http.HttpClientFacade.send(HttpClientFacade.java:133)
+	at com.promoit.otp.service.notification.TelegramNotificationService.send(TelegramNotificationService.java:40)
+	at com.promoit.otp.service.OtpService.generateAndSend(OtpService.java:46)
+	at com.promoit.otp.api.UserHandler.generateOtp(UserHandler.java:78)
+	at com.promoit.otp.api.UserHandler.handle(UserHandler.java:58)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.AuthFilter.doFilter(AuthFilter.java:76)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:101)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange$LinkHandler.handle(ServerImpl.java:915)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:891)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.net.ConnectException: null
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Utils.java:1070)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:223)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.checkRetryConnect(PlainHttpConnection.java:277)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(PlainHttpConnection.java:235)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:955)
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:932)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:531)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1794)
+	... 3 common frames omitted
+Caused by: java.nio.channels.ClosedChannelException: null
+	at java.base/sun.nio.ch.SocketChannelImpl.ensureOpen(SocketChannelImpl.java:204)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:942)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(PlainHttpConnection.java:211)
+	... 9 common frames omitted
+2026-04-28 17:19:13.367 [pool-2-thread-4] ERROR com.promoit.otp.api.UserHandler - User handler error
+java.nio.channels.ClosedByInterruptException: null
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:214)
+	at java.base/sun.nio.ch.SocketChannelImpl.endWrite(SocketChannelImpl.java:548)
+	at java.base/sun.nio.ch.SocketChannelImpl.implWrite(SocketChannelImpl.java:570)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:614)
+	at jdk.httpserver/sun.net.httpserver.Request$WriteStream.write(Request.java:421)
+	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:123)
+	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:203)
+	at java.base/java.io.FilterOutputStream.flush(FilterOutputStream.java:155)
+	at jdk.httpserver/sun.net.httpserver.FixedLengthOutputStream.close(FixedLengthOutputStream.java:90)
+	at jdk.httpserver/sun.net.httpserver.PlaceholderOutputStream.close(ExchangeImpl.java:477)
+	at com.promoit.otp.api.UserHandler.sendResponse(UserHandler.java:111)
+	at com.promoit.otp.api.UserHandler.generateOtp(UserHandler.java:81)
+	at com.promoit.otp.api.UserHandler.handle(UserHandler.java:58)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.AuthFilter.doFilter(AuthFilter.java:76)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:101)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange$LinkHandler.handle(ServerImpl.java:915)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:891)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-04-28 17:21:44.658 [pool-1-thread-1] INFO  c.p.otp.service.OtpExpiryScheduler - Code 4 (operation tgtest) marked EXPIRED
+2026-04-28 17:22:44.656 [pool-1-thread-1] INFO  c.p.otp.service.OtpExpiryScheduler - Code 5 (operation tgtest) marked EXPIRED
+2026-04-28 17:47:56.651 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-04-28 17:47:56.790 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@c03cf28
+2026-04-28 17:47:56.791 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-04-28 17:47:56.815 [pool-1-thread-1] INFO  c.p.otp.service.OtpExpiryScheduler - Code 6 (operation tgtest) marked EXPIRED
+2026-04-28 17:47:56.921 [main] INFO  com.promoit.otp.Main - OTP Service started on port 8081
+2026-04-28 18:07:30.176 [pool-2-thread-4] ERROR com.promoit.otp.api.AuthHandler - Error in auth handler
+java.lang.NullPointerException: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+	at com.promoit.otp.api.AuthHandler.handleLogin(AuthHandler.java:65)
+	at com.promoit.otp.api.AuthHandler.handle(AuthHandler.java:33)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.AuthFilter.doFilter(AuthFilter.java:76)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:101)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange$LinkHandler.handle(ServerImpl.java:915)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:891)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-04-28 18:07:48.672 [pool-2-thread-5] ERROR com.promoit.otp.api.AuthHandler - Error in auth handler
+java.lang.NullPointerException: Cannot invoke "com.google.gson.JsonElement.getAsString()" because the return value of "com.google.gson.JsonObject.get(String)" is null
+	at com.promoit.otp.api.AuthHandler.handleLogin(AuthHandler.java:65)
+	at com.promoit.otp.api.AuthHandler.handle(AuthHandler.java:33)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.AuthFilter.doFilter(AuthFilter.java:76)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:101)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange$LinkHandler.handle(ServerImpl.java:915)
+	at jdk.httpserver/com.sun.net.httpserver.Filter$Chain.doFilter(Filter.java:98)
+	at jdk.httpserver/sun.net.httpserver.ServerImpl$Exchange.run(ServerImpl.java:891)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-04-28 18:09:04.438 [pool-2-thread-8] INFO  c.p.o.s.n.TelegramNotificationService - Telegram message sent
+2026-04-28 18:09:04.438 [pool-2-thread-8] INFO  com.promoit.otp.api.UserHandler - OTP generated for user 1 operation tgtest
+2026-04-28 18:09:10.463 [pool-2-thread-9] INFO  c.p.o.s.n.TelegramNotificationService - Telegram message sent
+2026-04-28 18:09:10.464 [pool-2-thread-9] INFO  com.promoit.otp.api.UserHandler - OTP generated for user 1 operation tgtest
+2026-04-28 18:09:11.382 [pool-2-thread-10] INFO  c.p.o.s.n.TelegramNotificationService - Telegram message sent
+2026-04-28 18:09:11.383 [pool-2-thread-10] INFO  com.promoit.otp.api.UserHandler - OTP generated for user 1 operation tgtest
+2026-04-28 18:09:18.567 [pool-2-thread-1] INFO  c.p.o.s.n.TelegramNotificationService - Telegram message sent
+2026-04-28 18:09:18.568 [pool-2-thread-1] INFO  com.promoit.otp.api.UserHandler - OTP generated for user 1 operation tgtest
+2026-04-28 18:10:26.877 [pool-2-thread-3] INFO  c.p.o.s.n.TelegramNotificationService - Telegram message sent
+2026-04-28 18:10:26.878 [pool-2-thread-3] INFO  com.promoit.otp.api.UserHandler - OTP generated for user 1 operation tgtest
+2026-04-28 18:14:56.783 [pool-1-thread-1] INFO  c.p.otp.service.OtpExpiryScheduler - Code 7 (operation tgtest) marked EXPIRED
+2026-04-28 18:14:56.783 [pool-1-thread-1] INFO  c.p.otp.service.OtpExpiryScheduler - Code 8 (operation tgtest) marked EXPIRED
+2026-04-28 18:14:56.784 [pool-1-thread-1] INFO  c.p.otp.service.OtpExpiryScheduler - Code 9 (operation tgtest) marked EXPIRED
+2026-04-28 18:14:56.784 [pool-1-thread-1] INFO  c.p.otp.service.OtpExpiryScheduler - Code 10 (operation tgtest) marked EXPIRED
+2026-04-28 18:15:56.781 [pool-1-thread-1] INFO  c.p.otp.service.OtpExpiryScheduler - Code 11 (operation tgtest) marked EXPIRED
